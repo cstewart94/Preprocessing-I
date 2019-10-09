@@ -31,6 +31,7 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
 	line-height: 1;
+	background-color: #FFFFE4;
 }
 ol, ul {
 	list-style: none;
@@ -50,10 +51,148 @@ table {
 
 /* Set every element's box-sizing to border-box */
 * {
-    box-sizing: border-box;
+	box-sizing: border-box;
+	border:1px solid red;
 }
 
 html, body {
     height: 100%;
 }
 
+/* START VARIABLES*/
+@mainColor: #1F1F1F;
+@secondColor: black;
+@titleFont: 'Abril Fatface', cursive;
+@bodyFont: 'Lato', sans-serif;
+
+/*END VARIABLES*/
+
+/*START SELECTORS*/
+.redBorder(){
+  border:1px solid red;
+}
+
+.boxCenter(){
+  display:flex;
+  justify-content:center;
+}
+
+.spacing(){
+	margin: 1% 0;
+}
+/*END SELECTORS*/
+
+html{
+  font-size:62.5%;
+  font-family: @bodyFont;
+  color: @secondColor;
+}
+
+.mainContainer{
+	.boxCenter();
+	flex-direction:column;
+	width: 70%;
+	margin: 0 15%;
+	background-color: #F9F9E1;
+    height: 100%;
+}
+
+.topContent{
+	.boxCenter();
+	flex-direction:row;
+	height:fit-content;
+	margin-bottom:5%;
+
+	.titleBox{
+		.boxCenter();
+		flex-direction:column;
+		margin: 2% 2%;
+		height: fit-content;
+		width:60%
+	  }//CLOSES titleBox
+
+	.skillsBox{
+		.boxCenter();
+		flex-direction:column;
+		height:fit-content;
+		width:40%;
+		margin: 2%;
+	}//CLOSES skillsBox
+}//CLOSES topContent
+
+.bottomContent{
+	.boxCenter();
+	flex-direction:row;
+	height:fit-content;
+
+	.workBox{
+		.boxCenter();
+		flex-direction:column;
+		height:fit-content;
+		width:60%;
+		margin:2% 2% 2%;
+		padding-right: 10%;
+   		text-align: justify;
+	}//CLOSES workBox;
+
+	.educationBox{
+		.boxCenter();
+		flex-direction:column;
+		height:fit-content;
+		width:40%;
+		margin:2%;
+	}
+}//CLOSES bottomContent
+
+header{
+	.boxCenter();
+	margin:5% 0;
+
+	nav{
+
+		.boxCenter();
+
+		a{
+		color: @mainColor;
+		font-family: @bodyFont;
+		text-decoration: none;
+		padding: 1% 4%;
+    	font-size: 2.5rem;
+
+		}//CLOSES NAV LINKS(a)
+	}//CLOSES NAV
+}//CLOSES HEADER
+
+.smallBox{
+	margin-top:5%;
+}
+
+h1{
+  .spacing();
+  font-family: @titleFont;
+  font-size:3rem;
+}
+
+h2{
+  margin-top:2%;
+  font-family: @bodyFont;
+  font-size:2rem;
+  font-weight: bold;
+}
+
+p{
+  .spacing();
+  font-family: @bodyFont;
+  font-size:1.5rem;
+  margin-left:8%;
+}
+
+footer{
+  text-align:center;
+  font-family: @bodyFont;
+  font-size:1rem;
+
+  .copyright{
+	.spacing();
+  }
+}
