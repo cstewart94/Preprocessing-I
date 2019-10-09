@@ -94,8 +94,39 @@ html{
 	width: 70%;
 	margin: 0 15%;
 	background-color: #F9F9E1;
-    height: 100%;
+	height: 100%;
+
+	@media( max-width: 500px ) {
+		justify-content:start;
+	}// this closes the media query
+	
 }
+
+header{
+	.boxCenter();
+	margin:5% 0;
+
+	nav{
+
+		.boxCenter();
+
+		a{
+			display:flex;
+			color: @mainColor;
+			font-family: @bodyFont;
+			text-decoration: none;
+			padding: 1% 4%;
+			font-size: 2.5rem;
+		
+
+		@media( max-width: 500px ) {
+			padding: 1%;
+    		margin: 0 1vw;
+    		font-size: 1.5rem;
+		}// this closes the media query
+		}//CLOSES NAV LINKS(a)
+	}//CLOSES NAV
+}//CLOSES HEADER
 
 .topContent{
 	.boxCenter();
@@ -108,7 +139,11 @@ html{
 		flex-direction:column;
 		margin: 2% 2%;
 		height: fit-content;
-		width:60%
+		width:60%;
+
+		@media( max-width: 500px ) {
+			width:80%;
+		}// this closes the media query
 	  }//CLOSES titleBox
 
 	.skillsBox{
@@ -117,7 +152,18 @@ html{
 		height:fit-content;
 		width:40%;
 		margin: 2%;
+
+		@media( max-width: 500px ) {
+			width:80%;
+			margin-top:10%;
+		}// this closes the media query
 	}//CLOSES skillsBox
+
+	@media( max-width: 500px ) {
+		flex-direction:column;
+		justify-content:center;
+		align-items:center;
+	}// this closes the media query
 }//CLOSES topContent
 
 .bottomContent{
@@ -132,7 +178,13 @@ html{
 		width:60%;
 		margin:2% 2% 2%;
 		padding-right: 10%;
-   		text-align: justify;
+		text-align: justify;
+		   
+		   @media( max-width: 500px ) {
+			width:80%;
+			margin-top:10%;
+			padding: 0;
+		}// this closes the media query
 	}//CLOSES workBox;
 
 	.educationBox{
@@ -141,27 +193,19 @@ html{
 		height:fit-content;
 		width:40%;
 		margin:2%;
+
+		@media( max-width: 500px ) {
+			width:80%;
+			margin-top:10%;
+		}//this closes the media query
 	}
+
+	@media( max-width: 500px ) {
+		flex-direction:column;
+		justify-content:center;
+		align-items:center;
+	}// this closes the media query
 }//CLOSES bottomContent
-
-header{
-	.boxCenter();
-	margin:5% 0;
-
-	nav{
-
-		.boxCenter();
-
-		a{
-		color: @mainColor;
-		font-family: @bodyFont;
-		text-decoration: none;
-		padding: 1% 4%;
-    	font-size: 2.5rem;
-
-		}//CLOSES NAV LINKS(a)
-	}//CLOSES NAV
-}//CLOSES HEADER
 
 .smallBox{
 	margin-top:5%;
@@ -171,6 +215,10 @@ h1{
   .spacing();
   font-family: @titleFont;
   font-size:3rem;
+
+  @media( max-width: 500px ) {
+	text-align:center;
+}// this closes the media query
 }
 
 h2{
@@ -178,6 +226,10 @@ h2{
   font-family: @bodyFont;
   font-size:2rem;
   font-weight: bold;
+
+  @media( max-width: 500px ) {
+	text-align:center;
+}// this closes the media query
 }
 
 p{
@@ -185,6 +237,11 @@ p{
   font-family: @bodyFont;
   font-size:1.5rem;
   margin-left:8%;
+
+  @media( max-width: 500px ) {
+	text-align:center;
+	margin:0;
+}// this closes the media query
 }
 
 footer{
