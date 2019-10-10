@@ -1,1 +1,392 @@
-/* Compile your LESS file! */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+  background-color: #FFFFE4;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* Set every element's box-sizing to border-box */
+* {
+  box-sizing: border-box;
+  border: 1px solid red;
+}
+html,
+body {
+  height: 100%;
+}
+/* START VARIABLES*/
+/*END VARIABLES*/
+/*START MIX-INS*/
+/*END MIX-INS*/
+html {
+  font-size: 62.5%;
+  font-family: 'Lato', sans-serif;
+  color: black;
+}
+.mainContainer {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 70%;
+  margin: 0 15%;
+  background-color: #F9F9E1;
+  height: 100%;
+}
+@media (max-width: 500px) {
+  .mainContainer {
+    justify-content: start;
+  }
+}
+@media (max-width: 800px) {
+  .mainContainer {
+    justify-content: start;
+    width: 90vw;
+    margin: 0 5%;
+  }
+}
+header {
+  display: flex;
+  justify-content: center;
+  margin: 7% 0 0;
+}
+@media (max-width: 800px) {
+  header {
+    margin: 2% 0% 0;
+  }
+}
+header nav {
+  display: flex;
+  justify-content: center;
+  margin: 3% 0;
+}
+header nav a {
+  display: flex;
+  color: #1F1F1F;
+  font-family: 'Lato', sans-serif;
+  text-decoration: none;
+  padding: 1% 4%;
+  font-size: 2.5rem;
+}
+@media (max-width: 500px) {
+  header nav a {
+    padding: 1%;
+    margin: 0 1vw;
+    font-size: 1.5rem;
+  }
+}
+@media (max-width: 800px) {
+  .allContent {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+.topContent {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  height: fit-content;
+  margin-bottom: 5%;
+}
+@media (max-width: 800px) {
+  .topContent {
+    flex-direction: column;
+    width: 40%;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+  }
+}
+.topContent .titleBox {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin: 2% 2%;
+  height: fit-content;
+  width: 60%;
+}
+@media (max-width: 500px) {
+  .topContent .titleBox {
+    width: 80%;
+  }
+}
+.topContent .skillsBox {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: fit-content;
+  width: 40%;
+  margin: 2%;
+  text-align: justify;
+}
+@media (max-width: 500px) {
+  .topContent .skillsBox {
+    width: 80%;
+    margin-top: 10%;
+  }
+}
+@media (max-width: 800px) {
+  .topContent .skillsBox {
+    width: 90%;
+  }
+}
+@media (max-width: 500px) {
+  .topContent {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+.bottomContent {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  height: fit-content;
+}
+@media (max-width: 800px) {
+  .bottomContent {
+    flex-direction: column;
+    width: 60%;
+    height: 100%;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 5%;
+  }
+}
+.bottomContent .workBox {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: fit-content;
+  width: 60%;
+  margin: 2% 2% 2%;
+  padding-right: 10%;
+  text-align: justify;
+}
+@media (max-width: 500px) {
+  .bottomContent .workBox {
+    width: 80%;
+    margin-top: 10%;
+    padding: 0;
+  }
+}
+@media (max-width: 800px) {
+  .bottomContent .workBox {
+    flex-direction: column;
+    width: 100%;
+    padding: 0;
+  }
+}
+@media (max-width: 800px) {
+  .bottomContent .workBox .workHistory {
+    display: flex;
+    flex-direction: row;
+  }
+}
+.bottomContent .educationBox {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: fit-content;
+  width: 40%;
+  margin: 2%;
+}
+@media (max-width: 500px) {
+  .bottomContent .educationBox {
+    width: 80%;
+    margin-top: 10%;
+  }
+}
+@media (max-width: 500px) {
+  .bottomContent {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+.smallBox {
+  margin-top: 5%;
+}
+@media (max-width: 800px) {
+  .smallBox {
+    margin: 1% 0;
+  }
+}
+h1 {
+  margin: 1% 0;
+  font-family: 'Abril Fatface', cursive;
+  font-size: 3rem;
+}
+@media (max-width: 500px) {
+  h1 {
+    text-align: center;
+  }
+}
+@media (max-width: 800px) {
+  h1 {
+    text-align: center;
+  }
+}
+h2 {
+  margin-top: 2%;
+  font-family: 'Lato', sans-serif;
+  font-size: 2rem;
+  font-weight: bold;
+}
+@media (max-width: 500px) {
+  h2 {
+    text-align: center;
+  }
+}
+@media (max-width: 800px) {
+  h2 {
+    text-align: center;
+  }
+}
+p {
+  margin: 1% 0;
+  font-family: 'Lato', sans-serif;
+  font-size: 1.5rem;
+  margin-left: 8%;
+}
+@media (max-width: 500px) {
+  p {
+    text-align: center;
+    margin: 0;
+  }
+}
+@media (max-width: 800px) {
+  p {
+    text-align: center;
+  }
+}
+footer {
+  text-align: center;
+  font-family: 'Lato', sans-serif;
+  font-size: 1rem;
+}
+footer .copyright {
+  margin: 4% 0;
+}
