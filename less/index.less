@@ -67,7 +67,7 @@ html, body {
 
 /*END VARIABLES*/
 
-/*START SELECTORS*/
+/*START MIX-INS*/
 .redBorder(){
   border:1px solid red;
 }
@@ -80,7 +80,7 @@ html, body {
 .spacing(){
 	margin: 1% 0;
 }
-/*END SELECTORS*/
+/*END MIX-INS*/
 
 html{
   font-size:62.5%;
@@ -99,16 +99,27 @@ html{
 	@media( max-width: 500px ) {
 		justify-content:start;
 	}// this closes the media query
+
+	@media( max-width: 800px ) {
+		justify-content: start;
+		width: 90vw;
+		margin: 0 5%;
+	}// this closes the media query
 	
 }
 
 header{
 	.boxCenter();
-	margin:5% 0;
+	margin:7% 0 0;
+
+	@media( max-width: 800px ) {
+		margin: 2% 0% 0;
+	}// this closes the media query
 
 	nav{
 
 		.boxCenter();
+		margin:3% 0;
 
 		a{
 			display:flex;
@@ -128,11 +139,27 @@ header{
 	}//CLOSES NAV
 }//CLOSES HEADER
 
+.allContent{
+	@media( max-width: 800px ) {
+			display:flex;
+			flex-direction:row;
+			justify-content:center;
+	}// this closes the media query
+}
+
 .topContent{
 	.boxCenter();
 	flex-direction:row;
 	height:fit-content;
 	margin-bottom:5%;
+
+	@media( max-width: 800px ) {
+		flex-direction: column;
+		width: 40%;
+		align-items: center;
+		justify-content: space-between;
+		height: 100%;
+	}// this closes the media query
 
 	.titleBox{
 		.boxCenter();
@@ -152,10 +179,15 @@ header{
 		height:fit-content;
 		width:40%;
 		margin: 2%;
+		text-align: justify;
 
 		@media( max-width: 500px ) {
 			width:80%;
 			margin-top:10%;
+		}// this closes the media query
+
+		@media( max-width: 800px ) {
+			width:90%;
 		}// this closes the media query
 	}//CLOSES skillsBox
 
@@ -171,6 +203,15 @@ header{
 	flex-direction:row;
 	height:fit-content;
 
+	@media( max-width: 800px ) {
+		flex-direction: column;
+		width: 60%;
+		height: 100%;
+		align-items: center;
+		justify-content: space-between;
+		margin-bottom:5%;
+	}// this closes the media query
+
 	.workBox{
 		.boxCenter();
 		flex-direction:column;
@@ -185,6 +226,19 @@ header{
 			margin-top:10%;
 			padding: 0;
 		}// this closes the media query
+
+		@media( max-width: 800px ) {
+			flex-direction:column;
+			width:100%;
+			padding:0;
+		}// this closes the media query
+
+		.workHistory{
+			@media( max-width: 800px ) {
+				display:flex;
+				flex-direction: row;
+			}// this closes the media query
+		}
 	}//CLOSES workBox;
 
 	.educationBox{
@@ -198,6 +252,10 @@ header{
 			width:80%;
 			margin-top:10%;
 		}//this closes the media query
+
+		@media( max-width: 800px ) {
+			
+		}// this closes the media query
 	}
 
 	@media( max-width: 500px ) {
@@ -205,10 +263,18 @@ header{
 		justify-content:center;
 		align-items:center;
 	}// this closes the media query
+
+	@media( max-width: 800px ) {
+			
+	}// this closes the media query
 }//CLOSES bottomContent
 
 .smallBox{
 	margin-top:5%;
+
+	@media( max-width: 800px ) {
+		margin:1% 0;
+	}// this closes the media query
 }
 
 h1{
@@ -216,9 +282,13 @@ h1{
   font-family: @titleFont;
   font-size:3rem;
 
-  @media( max-width: 500px ) {
-	text-align:center;
-}// this closes the media query
+	@media( max-width: 500px ) {
+		text-align:center;
+	}// this closes the media query
+
+	@media( max-width: 800px ) {
+			text-align:center;
+	}// this closes the media query
 }
 
 h2{
@@ -227,9 +297,13 @@ h2{
   font-size:2rem;
   font-weight: bold;
 
-  @media( max-width: 500px ) {
-	text-align:center;
-}// this closes the media query
+	@media( max-width: 500px ) {
+		text-align:center;
+	}// this closes the media query
+
+	@media( max-width: 800px ) {
+		text-align:center;
+	}// this closes the media query
 }
 
 p{
@@ -238,10 +312,14 @@ p{
   font-size:1.5rem;
   margin-left:8%;
 
-  @media( max-width: 500px ) {
-	text-align:center;
-	margin:0;
-}// this closes the media query
+	@media( max-width: 500px ) {
+		text-align:center;
+		margin:0;
+	}// this closes the media query
+
+	@media( max-width: 800px ) {
+		text-align:center;
+	}// this closes the media query
 }
 
 footer{
@@ -250,6 +328,6 @@ footer{
   font-size:1rem;
 
   .copyright{
-	.spacing();
+	margin:4% 0;
   }
 }
